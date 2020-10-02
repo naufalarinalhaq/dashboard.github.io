@@ -1,2 +1,2 @@
-# dashboard.github.io
+# naufalarinalhaq.github.io
 Latihan Membuat Dashboard
