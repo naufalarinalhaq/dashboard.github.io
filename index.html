@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.cs">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css">
+    <script type="text/javascript" src="chart-js/chart.js"></script>
+
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <a class="navbar-brand" href="#"> OTT APPlICATION DASHBOARD</a>
+    </nav>
+
+    <div class="row no-gutters mt-5">
+      <!-- sidebar -->
+      <div class="col-md-2 bg-dark mt-2 pr-3 pt-4">
+        <ul class="nav flex-column ml-3 mb-5">
+            <li class="nav-item">
+              <a class="nav-link active text-white" href="#"><i class="fas fa-tachometer-alt mr-2"></i> Top 5 Application</a> <hr class="bg-secondary">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#"><i class="fas fa-video mr-2"></i> Video Watch</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled text-grey" href="#"><i class="fas fa-film mr-2"></i> Movie & Tv Channel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled text-grey" href="#"><i class="fas fa-music mr-2"></i> Music</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled text-grey" href="#"><i class="fas fa-gamepad mr-2"></i> Games</a>
+            </li>
+        </ul>
+      </div>
+
+      <!-- dashboard -->
+      <div class="col-md-10 p-5 pt-2">
+         <h5><i class="fas fa-tachometer-alt"></i> Top 5 Application > Streaming > Video Watch</h5> <hr>
+
+         <div class="row">
+           <div class="card bg-light ml-3" style="width: 11rem;">
+            <div class="card-body">
+              <h6 class="card-title"><i class="fab fa-youtube mr-2"></i> 1. Youtube</h6> <hr>
+              <table>
+                <tr>
+                  <th style="width: 70px;">D7</th>
+                  <td>17 Mb</td>
+                </tr>
+                <tr>
+                  <th>Current </th>
+                  <td>19 Mb</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="card bg-light ml-3" style="width: 11rem;">
+            <div class="card-body">
+              <h6 class="card-title"><i class="fab fa-facebook mr-2"></i> 2. Facebook</h6> <hr>
+              <table>
+                <tr>
+                  <th style="width: 70px;">D7</th>
+                  <td>17 Mb</td>
+                </tr>
+                <tr>
+                  <th>Current </th>
+                  <td>19 Mb</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="card bg-light ml-3" style="width: 11rem;">
+            <div class="card-body">
+              <h6 class="card-title"><i class="fab fa-instagram mr-2"></i> 3. Instagram</h6> <hr>
+              <table>
+                <tr>
+                  <th style="width: 70px;">D7</th>
+                  <td>17 Mb</td>
+                </tr>
+                <tr>
+                  <th>Current </th>
+                  <td>19 Mb</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="card bg-light ml-3" style="width: 11rem;">
+            <div class="card-body">
+              <h6 class="card-title"><i class="fab fa-tiktok mr-2"></i> 4. Tiktok</h6> <hr>
+              <table>
+                <tr>
+                  <th style="width: 70px;">D7</th>
+                  <td>17 Mb</td>
+                </tr>
+                <tr>
+                  <th>Current </th>
+                  <td>19 Mb</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+          <div class="card bg-light ml-3" style="width: 11rem;">
+            <div class="card-body">
+              <h6 class="card-title"><i class="fab fa-youtube mr-2"></i> 5. Youtube-Go</h6> <hr>
+              <table>
+                <tr>
+                  <th style="width: 70px;">D7</th>
+                  <td>17 Mb</td>
+                </tr>
+                <tr>
+                  <th>Current </th>
+                  <td>19 Mb</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+
+         </div>
+         <br><br>
+
+         <!-- chart.js -->
+         <div class="row">    
+            <div class="canvas" style="width: 900px; height: 500px;">
+              <h6 style="text-align: center;">Streaming Start Delay</h3>
+              <canvas id="speedChart"></canvas>
+           </div>
+         </div>
+
+         <div class="row">
+            <div class="card ml-3" style="width: 13rem; height: auto;">
+              <div class="card-header">
+                Time Frame
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <input type="checkbox" name="" checked>
+                  <label>Weekly</label>
+                </li>
+                <li class="list-group-item">
+                  <input type="checkbox" name="">
+                  <label>Daily</label>
+                </li>
+                <li class="list-group-item">
+                  <input type="checkbox" name="">
+                  <label>Hourly</label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="card ml-3" style="width: 13rem; height: auto;">
+              <div class="card-header">
+                Level
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <input type="checkbox" name="" >
+                  <label>National</label>
+                </li>
+                <li class="list-group-item">
+                  <input type="checkbox" name="">
+                  <label>Region</label>
+                </li>
+                <li class="list-group-item">
+                  <input type="checkbox" name="" checked>
+                  <label>Province</label>
+                </li>
+                <li class="list-group-item">
+                  <input type="checkbox" name="">
+                  <label>City/Kab</label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="card ml-3" style="width: 13rem;">
+              <div class="card-header">
+                Data
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <input type="checkbox" name="">
+                  <label>Trafic</label>
+                </li>
+                <li class="list-group-item">
+                  <input type="checkbox" name="">
+                  <label>User</label>
+                </li>
+              </ul>
+            </div>
+
+            <div class="card ml-3" style="width: 13rem;">
+              <div class="card-header">
+                KQI
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                  <input type="checkbox" name="" checked>
+                  <label>Latency (ms)</label>
+                </li>
+                <li class="list-group-item">
+                  <input type="checkbox" name="">
+                  <label>DL RRT (ms)</label>
+                </li>
+                <li class="list-group-item">
+                  <input type="checkbox" name="">
+                  <label>PL (ms)</label>
+                </li>
+              </ul>
+            </div>
+         </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <script type="text/javascript">
+      var speedCanvas = document.getElementById("speedChart");
+
+      Chart.defaults.global.defaultFontFamily = "Lato";
+      Chart.defaults.global.defaultFontSize = 18;
+
+      var dataFirst = {
+          label: "Kab. Indramayu",
+          data: [0, 5000, 7500, 2000, 4000, 3000, 1500],
+          lineTension: 0,
+          fill: false,
+          borderColor: 'blue'
+        };
+
+      var dataSecond = {
+          label: "Kab. Kebumen",
+          data: [0, 4000, 6500, 2000, 5000, 7000, 8000],
+          lineTension: 0,
+          fill: false,
+        borderColor: 'orange'
+        };
+
+      var dataThrid = {
+          label: "Kota Banjar",
+          data: [1000, 5000, 1500, 6000, 8000, 10000, 15000],
+          lineTension: 0,
+          fill: false,
+        borderColor: 'green'
+        };
+
+      var dataFourth = {
+          label: "Kab. Bekasi",
+          data: [1000, 5000, 10000, 15000, 5000, 10000, 8000],
+          lineTension: 0,
+          fill: false,
+        borderColor: 'yellow'
+        };
+
+      var speedData = {
+        labels: ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli"],
+        datasets: [dataFirst, dataSecond, dataThrid, dataFourth]
+      };
+
+      var chartOptions = {
+        legend: {
+          display: true,
+          position: 'top',
+          labels: {
+            boxWidth: 80,
+            fontColor: 'black'
+          }
+        }
+      };
+
+      var lineChart = new Chart(speedCanvas, {
+        type: 'line',
+        data: speedData,
+        options: chartOptions
+      });
+    </script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+  </body>
+</html>
